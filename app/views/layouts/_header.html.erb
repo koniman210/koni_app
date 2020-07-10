@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg " style="background-color:#074970;">
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+    <a class="navbar-brand" id="log" href="#">株式会社 YUZUCONI</a>
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">こにまん</a>
+        <div class="dropdown-menu" aria-labelledy="navbarDropdownMenuLink">
+        <a class ="dropdown-item" href=" #">自己紹介</a>
+        <a class ="dropdown-item" href="https://twitter.com/koneet27">Twitter</a>
+        <a class ="dropdown-item" href="https://www.instagram.com/?hl=ja">Instagram</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class= "nav-link dropdown-toggle" href="#" id="item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ゆづき</a>
+        <div class="dropdown-menu" aria-labelledy="navbarDropdownMenuLink">
+        <a class = "dropdown-item" href="https://twitter.com/yuunzuuun">Twitter</a>
+        <a class = "dropdown-item" href="https://www.instagram.com/yuzupoons/?hl=ja">Instagram</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://yuzuconi.com/">BLOG</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.youtube.com/channel/UCJkE3vLCs9cIPNns1Dwud_Q/videos?view_as=subscriber">Movie</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tiktok</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">お問い合わせ</a>
+      </li>
+        <li class="nav-item">
+          <%= link_to "ログアウト" , destroy_user_session_path , method: :delete,class: "nav-link"%>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "新規登録", new_user_registration_path, class: "
+          nav-link" %>
+          <%= link_to "ログイン", new_user_session_path, class:"nav-link" %>
+      <% end %>
+      </li>
+    </ul> 
+  </div>
+</nav>
+        

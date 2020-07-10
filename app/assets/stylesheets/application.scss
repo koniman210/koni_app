@@ -1,0 +1,50 @@
+@import "bootstrap/scss/bootstrap";
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+body {
+  background-color: rgb(167, 158, 158);
+  background-image: url(img/yuzuconi.png);
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+nav {
+  padding: 8px;
+  text-align: center;
+}
+
+nav a {
+  font-size: 18px;
+}
+
+.navbar-nav .nav-link {
+  color: whitesmoke;
+  margin: 0 7px;
+}
+
+nav #log {
+  font-size: 30px;
+  margin-right: 60px;
+  color: white;
+}
+
+nav .dropdown-item {
+  color: #074970;
+}
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+.container-login {
+  @extend .container-fluid;
+  max-width: 350px;
+  padding: 1rem;
+  margin-top: 100px;
+}
